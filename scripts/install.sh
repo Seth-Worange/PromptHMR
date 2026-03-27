@@ -108,8 +108,8 @@ else
 fi
 
 if [ "$PT_VERSION" == "2.4" ]; then
-    conda create -n phmr_pt$PT_VERSION python=3.11.9 -y
-    conda activate phmr_pt$PT_VERSION
+    # conda create -n phmr_pt$PT_VERSION python=3.11.9 -y
+    # conda activate phmr_pt$PT_VERSION
 
     echo "Installing PyTorch 2.4 and compatible packages..."
     pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu121

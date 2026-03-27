@@ -1,7 +1,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.dirname(__file__) + '/..')
-os.environ["CUDA_VISIBLE_DEVICES"]="0"
+os.environ["CUDA_VISIBLE_DEVICES"]="4"
 import cv2
 import tyro
 import torch
@@ -23,7 +23,7 @@ from pipeline.camcalib.model import CameraRegressorNetwork
 from segment_anything import SamPredictor, sam_model_registry
 
 
-def main(image='data/examples/example_1.jpg', gravity_align=False, detect_conf=0.3, render_overlap=False):
+def main(image='data/examples/team.jpg', gravity_align=False, detect_conf=0.3, render_overlap=False):
     savedir = os.path.basename(image)
     os.makedirs(savedir, exist_ok=True)
 
